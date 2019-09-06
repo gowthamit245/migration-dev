@@ -1,0 +1,135 @@
+body{
+  padding: 0px 0px 0px 0px;
+}
+button:focus,:focus{
+  box-shadow:0 0 0 0.2rem rgba(0, 123, 255, 0);
+  outline: 0;
+}
+.custom-modeal-body .form-group input,.custom-modeal-body .form-group select{
+  outline: 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  border-radius: 0;
+  line-height: 20px;
+  padding-left: 0px;
+  font-size: 16px;
+  border-radius: 0;
+}
+.custom-modeal-body  .form-group{
+  margin: 0;
+}
+.custom-modeal-body label{
+      padding: 0;
+      position: relative;
+    top: 4px;
+    font-size: 13px;
+  }
+
+.custom-modeal-body .modal-title{
+ font-size: 16px;
+}
+
+/* Style the navigation bar */
+.navbar {
+    width: 100%;
+    background-color:#2A1B60;
+    box-shadow: 0 3px 5px #D2D3D4;
+  
+  }
+  
+  /* Navbar links */
+  a.nav-link {
+    float: left;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: unset;
+  }
+  
+  /* Navbar links on mouse-over */
+  .navbar a:hover {
+    background-color:rgb(219, 125, 113);
+  }
+  .navbar-nav
+  {
+    margin-left: 25em;  
+  }
+  .navbar-nav2
+  {
+    margin-left: 29em;
+    display: block;
+    color: white;
+    font-size: 15PX;
+    /* margin-top: 0.3em; */
+  }
+  /* Current/active navbar link */
+  /* .active {
+    background-color: #4CAF50;
+  } */
+  .source
+  {
+    margin-top:3em;
+   /* background-color:#ce4249d6;*/
+    
+    margin-left: -1em;
+  
+     
+  }
+  .source2
+  {
+    margin-top:3em;
+ /*   background-color:#ce4249d6;*/   
+  }
+  
+  .sidebar
+  {
+    border-right: 1px solid rgb(199, 198, 198);
+    height: 89.0vh;
+    box-shadow: 0 0px 4px 0px #D2D3D4;
+  }
+  .source-title
+  {
+     padding: 0.8em;
+    
+  }
+  .source-footer
+  {
+    padding: 0.6em;
+    
+  }
+  .selectall
+  {
+      margin-left: 2em;
+  }
+  .none
+  {
+      margin-left: 3em;
+  }
+  .source-footer button{
+    color: white;
+  }
+  .source-footer .btn:hover
+  {
+    background-color: #dc3545;
+    
+  }
+
+  .selected{
+    background-color: #dc3545;
+    color: white;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+  .card-header
+{
+padding: 0 !important;
+
+}
+.card {
+      border: 0 solid !important;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    box-shadow: none;
+}

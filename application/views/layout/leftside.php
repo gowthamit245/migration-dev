@@ -23,26 +23,43 @@ if($pagename!='home'){
       <div class="card-body">
                 <div class="card-header" id="headingOne">
                   <h2 class="mb-0">
-                    <button class="btn btn-link text-dark" type="button" data-toggle="collapse" data-target="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
-                      <b>Select Database</b>
+                    <button class="btn btn-link text-dark ml-3" type="button" data-toggle="collapse" data-target="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
+                      
+                      <?php if($this->session->userdata('jobname') != '' && count($source)>0){
+                            echo "<b>".$source[0]['database_list']."</b>";
+                        }
+                        else
+                          {
+                            echo "<b>Select Database</b>";
+                          }?>
                     </button>
                   </h2>
                 </div>
-                <div id="collapsetwo" class="collapse " aria-labelledby="headingOne" data-parent="#collapse11">
+             <!-- <div id="collapsetwo" class="collapse " aria-labelledby="headingOne" data-parent="#collapse11">
                   <div class="card-body">
                     <?php if($this->session->userdata('jobname') != '' && count($source)>0){
                             echo "<b>".$source[0]['database_list']."</b>";
                         }?> 
                   </div>
-                </div>
+                </div>  -->
                 <div class="card-header" id="headingOne">
                   <h2 class="mb-0">
-                    <button class="btn btn-link  text-dark" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                      <b>Select Schemas</b>
+                    <button class="btn btn-link  text-dark ml-3" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                      <!-- <b>Select Schemas</b> -->
+                      <?php if($this->session->userdata('jobname') != '' && count($schema)>0){
+                 foreach ($schema as $key => $value) {
+                        echo "<b>".$value['schema_list']."</b><br>";
+                     }
+                
+                    }
+                    else{
+                       echo "<b>Select Schemas</b>";
+                    }
+                        ?> 
                     </button>
                   </h2>
                 </div>
-                <div id="collapseThree" class="collapse " aria-labelledby="headingOne" data-parent="#collapse11">
+                <!-- <div id="collapseThree" class="collapse " aria-labelledby="headingOne" data-parent="#collapse11">
                   <div class="card-body">
                     <?php if($this->session->userdata('jobname') != '' && count($schema)>0){
                  foreach ($schema as $key => $value) {
@@ -50,17 +67,27 @@ if($pagename!='home'){
                      }
                 
                     }
-                        ?> 
+                        ?>  
                   </div>
-                </div>
+                </div> -->
                 <div class="card-header" id="headingOne">
                       <h2 class="mb-0">
-                        <button class="btn btn-link  text-dark" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
-                          <b>Select Tables</b>
+                        <button class="btn btn-link  text-dark ml-3" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+                         <!--  <b>Select Tables</b> -->
+                          <?php if($this->session->userdata('jobname') != '' && count($tables)>0){
+                  foreach ($tables as $key => $value) {
+                        echo "<b>".$value['table_list']."</b><br>";
+                 }
+                
+            }
+            else
+              {
+                   echo "<b>Select Tables</b>";
+              }?> 
                         </button>
                       </h2>
                 </div>
-                <div id="collapsefour" class="collapse " aria-labelledby="headingOne" data-parent="#collapse11">
+               <!--  <div id="collapsefour" class="collapse " aria-labelledby="headingOne" data-parent="#collapse11">
                   <div class="card-body">
                    <?php if($this->session->userdata('jobname') != '' && count($tables)>0){
                   foreach ($tables as $key => $value) {
@@ -69,7 +96,7 @@ if($pagename!='home'){
                 
             }?> 
                   </div>
-                </div>
+                </div> -->
       </div>
     </div>
   </div>
@@ -83,8 +110,8 @@ if($pagename!='home'){
       </h2>
     </div>
 
-    <div id="collapsefive" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
+    <div id="collapsefive" class="collapse target_body ml-3 p-2" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body ">
          <?php if($this->session->userdata('jobname') != '' && count($target)>0){
                   foreach ($target as $key => $value) {
                     if($value['status'] == 1 ){

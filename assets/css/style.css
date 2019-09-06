@@ -33,7 +33,7 @@ button:focus,:focus{
 /* Style the navigation bar */
 .navbar {
     width: 100%;
-    background-color:#2A1B60;
+    background-color:#175695;
     box-shadow: 0 3px 5px #D2D3D4;
   
   }
@@ -132,4 +132,19 @@ padding: 0 !important;
       border: 0 solid !important;
     border-bottom: 1px solid rgba(0,0,0,.125);
     box-shadow: none;
+}
+/*======gowthami=====*/
+.navbar_style
+{
+   background-color:#175695;
+}
+.card-body
+{
+  padding: 0 !important;
+ 
+}
+.target_body
+{
+   background-color:rgb(245, 246, 250);
+  
 }
